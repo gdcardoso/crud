@@ -312,7 +312,7 @@ class DeveloperController {
       best_time_to_work: req.body.best_time_to_work,
     });
 
-    return res.json({ ok: `${req.body.name} developer successfully deleted` });
+    return res.json({ ok: `${req.body.name} developer successfully updated` });
   }
 
   async delete(req, res) {
