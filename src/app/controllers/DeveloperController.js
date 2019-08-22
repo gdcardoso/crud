@@ -265,11 +265,54 @@ class DeveloperController {
       return res.status(400).json({ error: 'Validation fails' });
     }
 
-    const { name } = await Developer.findByIdAndUpdate(req.params.id, {
+    await Developer.findByIdAndUpdate(req.params.id, {
       email: req.body.email,
+      name: req.body.name,
+      skype: req.body.skype,
+      phone: req.body.phone,
+      linkedin: req.body.linkin,
+      city: req.body.city,
+      state: req.body.state,
+      portfolio: req.body.portfolio,
+      salary_requirements: req.body.salary_requirements,
+      ionic: req.body.ionic,
+      reactjs: req.body.reactjs,
+      react_native: req.body.react_native,
+      android: req.body.android,
+      ios: req.body.ios,
+      html: req.body.html,
+      css: req.body.css,
+      bootstrap: req.body.bootstrap,
+      jquery: req.body.jquery,
+      angularjs1: req.body.angularjs1,
+      angular: req.body.angular,
+      java: req.body.java,
+      asp_mvc: req.body.asp_mvc,
+      asp_webform: req.body.asp_webform,
+      c: req.body.c,
+      c_sharp: req.body.c_sharp,
+      nodejs: req.body.nodejs,
+      cake: req.body.cake,
+      django: req.body.django,
+      magento: req.body.magento,
+      php: req.body.php,
+      vue: req.body.vue,
+      wordpress: req.body.wordpress,
+      python: req.body.python,
+      ruby: req.body.ruby,
+      my_sql_server: req.body.my_sql_server,
+      salesforce: req.body.salesforce,
+      photoshop: req.body.photoshop,
+      illustrator: req.body.illustrator,
+      seo: req.body.seo,
+      laravel: req.body.laravel,
+      other: req.body.other,
+      crud: req.body.crud,
+      willingness_to_work: req.body.willingness_to_work,
+      best_time_to_work: req.body.best_time_to_work,
     });
 
-    return res.json({ ok: `${name} developer successfully update` });
+    return res.json({ ok: `${req.body.name} developer successfully deleted` });
   }
 
   async delete(req, res) {
